@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <div>Список Изображений</div>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="text" placeholder="Введите имя" />
+        <input type="file" name="file" />
+        <button type="submit">Добавить</button>
+    </form>
+    <div>Поиск по имени</div>
+    <form method="post" action="filterByFull">
+        <input type="text" name="filterByFull">
+        <button type="submit">Найти</button>
+    </form
+    {{#heartImages}}
+    <div>
+        <b>{{id}}</b>
+        <i>{{name}}</i>
+        <div>
+            <img src="/img/{{filename}}">
+        </div>
+    </div>
+    {{/heartImages}}
+</body>
+</html>
